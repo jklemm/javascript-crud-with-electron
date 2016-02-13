@@ -1,0 +1,22 @@
+{
+  "name": "javascript-crud-with-electron",
+  "version": "0.1.0",
+  "description": "Simple Javacript CRUD using Electron",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/jklemm/javascript-crud-with-electron.git"
+  },
+  "author": "Jorge Augusto Klemm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jklemm/javascript-crud-with-electron/issues"
+  },
+  "homepage": "https://github.com/jklemm/javascript-crud-with-electron#readme",
+  "devDependencies": {
+    "electron-prebuilt": "^0.36.7"
+  }
+}
