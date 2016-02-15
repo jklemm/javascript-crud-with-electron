@@ -18,5 +18,9 @@
   "homepage": "https://github.com/jklemm/javascript-crud-with-electron#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.36.7"
+  },
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "jquery": "^2.2.0"
   }
 }

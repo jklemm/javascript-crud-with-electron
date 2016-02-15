@@ -1,12 +1,112 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<title>Title</title>
-	<link rel="stylesheet" href="">
+  <meta charset="UTF-8">
+  <title>Javascript CRUD</title>
+  
+  <!-- Bootstrap minified CSS -->
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-	Hello World!
+
+  <div class="container">
+    <h1>Javascript CRUD</h1>
+    <p>The ideia is control all the information flow in javascript, using only Bootstrap and Jquery</p>
+
+    <hr>
+
+    <button type="button" class="btn btn-primary js-open-add-person-modal">
+      <span class="glyphicon glyphicon-plus"></span>&nbsp; Add Person
+    </button>
+
+    <br>
+    <br>
+
+    <table id="people_table" class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Options</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td colspan="4">..</td>
+        </tr>
+      </tfoot>
+    </table>
+
+    <hr>
+
+    <form class="form-horizontal" action="#">
+      <div class="form-group">
+        <label for="input_person_id" class="col-md-2 control-label">Search a person by ID</label>
+        <div class="input-group col-md-4">
+          <input type="text" class="form-control js-search-person" id="input_person_id">
+          <span class="input-group-btn">
+            <button class="btn btn-default" type="button">
+              <span class="glyphicon glyphicon-search"></span>
+            </button>
+          </span>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="text_person_name" class="col-md-2 control-label">Name</label>
+        <div class="col-md-4">
+          <p class="form-control-static input-xs" id="text_person_name">.</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="text_person_age" class="col-md-2 control-label">Age</label>
+        <div class="col-md-2">
+          <p class="form-control-static input-xs" id="text_person_age">.</p>
+        </div>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal fade" id="modal_person" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title">Modal title</h4>
+        </div>
+        <div class="modal-body">
+          <form class="form-horizontal">
+            <input type="hidden" id="modal_person_id">
+            <div class="form-group">
+              <label for="modal_person_name" class="col-md-2 control-label">Name</label>
+              <div class="col-md-6">
+                <input type="text" class="form-control input-xs" id="modal_person_name">
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="modal_person_age" class="col-md-2 control-label">Age</label>
+              <div class="col-md-2">
+                <input type="text" class="form-control input-xs" id="modal_person_age">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary modal-action">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- JQuery minified JavaScript -->
+  <script>window.$ = window.jQuery = require('./node_modules/jquery');</script>
+  <!-- Bootstrap minified JavaScript -->
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  
+  <!-- Custom CSS -->
+  <script type="text/javascript" src="js/person.js"></script>
 </body>
 </html>
